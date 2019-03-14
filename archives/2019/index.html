@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="薛定谔的雪碧在 Github 上的个人博客">
+    <meta name="keyword" content>
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxxtqngmj3029029jrd.jpg">
+    <link rel="alternate" type="application/atom+xml" title="薛定谔的雪碧" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Sorryblue&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://sorryblue.github.io/archives/2019/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxyqptqkj31z4140gpv.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
+" data-ishome="false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    薛定谔的雪碧
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjwhe1uh2g3050050wgo.gif">
+                        <h5><a href="/about/">Sorryblue</a></h5>
+                        <p>我未成名卿为嫁,可能俱是不如人</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1fzjw6yekt6j32nt1rv4iz.jpg')">
+    <a href="/2019/03/14/Trivia-51/">
+        <h2 class="post-title">
+            Trivia-51
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-14
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐51
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+有史以来华盛顿州最高的温度是在1961年8月5日的冰港大坝记录到的47.8摄氏度。
+
+为了想要减少世嘉公司Dreamcast主机的销售量，索尼公司宣布了PS2，并夸大了它的表现能力。
+
+尼泊尔的国旗是全世界最精准的。甚至在尼泊尔的宪法上还有一段文字详细描述了绘制国旗的步骤。
+
+拉什莫尔山(总统..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12c8qav04j31hc0u0440.jpg')">
+    <a href="/2019/03/13/Trivia-50/">
+        <h2 class="post-title">
+            Trivia-50
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-13
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐50
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+有史以来华盛顿州最高的温度是在1961年8月5日的冰港大坝记录到的47.8摄氏度。
+
+为了想要减少世嘉公司Dreamcast主机的销售量，索尼公司宣布了PS2，并夸大了它的表现能力。
+
+尼泊尔的国旗是全世界最精准的。甚至在尼泊尔的宪法上还有一段文字详细描述了绘制国旗的步骤。
+
+拉什莫尔山(总统..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12cf0gtnbj32a81a0az1.jpg')">
+    <a href="/2019/03/12/Trivia-49/">
+        <h2 class="post-title">
+            Trivia-49
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-12
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐49
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+至今7部票房最高的电影中有4部是在2015年上映的。分别是《复仇者：奥创纪元》.《速度与激情7》.《侏罗纪公园世界》和《星球大战：原力觉醒》。
+
+在佛罗里达州已经发现了4条尼罗鳄。这是世界体型第二大的鳄鱼，而且比佛罗里达州本土的鳄鱼都要更危险。
+
+凯撒大帝唯一的儿子凯撒里昂是埃及最后一位法老。..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12ckhc9fij30zk0m8ak5.jpg')">
+    <a href="/2019/03/11/Trivia-48/">
+        <h2 class="post-title">
+            Trivia-48
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-11
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐48
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+出现在英国每平方英里土地上的龙卷风比全世界其他国家都要多。
+
+在乌干达拥有个人车牌的车主面临超过300%的税费增加，税费从原来的1498美元增加到了现在的5992美元。
+
+由于莎士比亚的话剧脍炙人口，导致许多人认为凯撒大帝最终的遗言是“Brutus你呢？”而实际上，他说的是“我的孩子，还有你？..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12cn866hyj31hc0u0gr3.jpg')">
+    <a href="/2019/03/10/Trivia-47/">
+        <h2 class="post-title">
+            Trivia-47
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-10
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐47
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+二战时的盟军曾考虑过空投胶水将纳粹军队粘在地上。[点击查看来源]
+
+雌性大熊猫每年可能只有几天受孕时间，而在此期间，每头雌性大熊猫都将与多头雄性大熊猫交配数十次。[点击查看来源]
+
+日本一家动物园曾经花了四年的时间促使一对鬣狗交配，最后才意识到它们都是雄性。(因为雌雄鬣狗也有「假丁丁」，所以容..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12crluyx3j31hc0u0n1v.jpg')">
+    <a href="/2019/03/09/Trivia-46/">
+        <h2 class="post-title">
+            Trivia-46
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-09
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐46
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+圣卢西亚是全世界唯一一个以女性名字命名的国家。它是法国人以锡拉库扎的Saint Lucy命名的。
+
+中国花费30亿美元建造了一个熊猫形状的太阳能光伏电站，借此让更多的年轻人对可再生能源产生兴趣。
+
+在捕猎时，白鼬会发疯一样的旋转.跳跃我不停歇并且扭动来吸引兔子的注意。这种行为会将兔子催眠，直到..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12ctx9kwcj30zk0m8dun.jpg')">
+    <a href="/2019/03/08/Trivia-45/">
+        <h2 class="post-title">
+            Trivia-45
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-08
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐45
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+站着就会燃烧热量。平均来说，一个体重68公斤的人光是站着什么也不干的话，每小时能消耗114卡。
+
+虽然GPS是免费的，但每天的运营费用要花掉200万美元。这些钱来自美国人的税收。
+
+二战期间，德国在伦敦上空抛下数百万英镑的假钞，想要借此击垮英国经济。
+
+《花花公子》从1970年开始发行杂志的盲..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview " style="background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12cw31k40j30sg0hs761.jpg')">
+    <a href="/2019/03/07/Trivia-44/">
+        <h2 class="post-title">
+            Trivia-44
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-07
+        </p>
+        
+        <h3 class="post-subtitle">
+            冷知识套餐44
+        </h3>
+        
+        <div class="post-content-preview">
+            <p>
+                
+一只死去的壁虎可以在墙上坚持半小时不掉下去。[点击查看来源]
+
+为了对抗肥胖，法国于2015年下令禁止快餐店免费续杯。[点击查看来源]
+
+一位物理学家在2012年面临闯红灯罚款时，通过发表一篇数学论文证明了自己的清白，他甚至还因这篇论文而获奖了。[点击查看来源]
+
+“早餐是一天当天最重要的一餐..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    
+    <li class="next">
+        <a href="/archives/2019/page/2/">Older Posts &rarr;</a>
+    </li>
+    
+</ul>
+
+
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+
+            <!-- About Me -->
+            <section class="visible-md visible-lg" style="padding: 0 18px">
+                <div class="short-about">
+                    <!--侧边栏头像-->
+                    
+                    <img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjwhe1uh2g3050050wgo.gif">
+                    
+                    <h5><a href="/about/">Sorryblue</a></h5>
+                    
+                    <p>我未成名卿为嫁,可能俱是不如人</p>
+                    
+                    <hr>
+                    <!-- SNS Link 社交 -->
+                    <ul class="list-inline">
+                        
+                        
+                        <li>
+                            <a target="_blank" href="https://twitter.com/yan764238964">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a target="_blank" href="https://www.zhihu.com/people/mo-ran-hen">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+                        <li>
+                            <a target="_blank" href="http://weibo.com/5194224563">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+
+                        
+                        <li>
+                            <a target="_blank" href="https://github.com/sorryblue">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Featured Tags  标签 -->
+            
+            <section>
+                <div class="tags">
+                    
+                    
+                    
+                    
+                    <a href="/tags/#-冷知识" title="-冷知识" rel="51">-冷知识</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </section>
+            
+
+            
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/yan764238964">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/mo-ran-hen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/5194224563">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/sorryblue">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 薛定谔的雪碧 2019
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://sorryblue.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = '3a43a1f4d7fac17fde189c0f259ff121';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjwhe1uh2g3050050wgo.gif">
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+
+</html>

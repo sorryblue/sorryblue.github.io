@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="薛定谔的雪碧在 Github 上的个人博客">
+    <meta name="keyword" content>
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxxtqngmj3029029jrd.jpg">
+    <link rel="alternate" type="application/atom+xml" title="薛定谔的雪碧" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        React｜Sorryblue&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://sorryblue.github.io/2019/01/22/React/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxyqptqkj31z4140gpv.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
+" data-ishome="false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    薛定谔的雪碧
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="nullhttp://ww1.sinaimg.cn/large/005Fwr5xly1g12erewclnj30k00b4aai.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12erewclnj30k00b4aai.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>React</h1>
+                    
+                    <h2 class="subheading">React基础了解</h2>
+                    
+                    <span class="meta">
+                         作者 Sorryblue
+                        <span>
+                          日期 2019-01-22
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#-React -框架" title="-React -框架">-React -框架</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            React
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h1 id="React"><a href="#React" class="headerlink" title="React"></a>React</h1><p>React是通过声明一个类(函数)来创建UI的.</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">npx create-react-app app</span><br><span class="line">cd app</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<p>##　全家桶</p>
+<ul>
+<li>reac的全家桶<ol>
+<li>react</li>
+<li>react-router-dom</li>
+<li>redux(mobx)</li>
+<li>react的第三方UI库(antd)</li>
+<li>react-native开发原生APP</li>
+</ol>
+</li>
+<li>react需要注意的东西:<ol>
+<li>jsx</li>
+<li>state</li>
+<li>props</li>
+<li>数据的通信</li>
+</ol>
+</li>
+</ul>
+<h2 id="jsx"><a href="#jsx" class="headerlink" title="jsx"></a>jsx</h2><h3 id="jsx-gt-javascript-xml-一种js和自定义写法的一种混合模式"><a href="#jsx-gt-javascript-xml-一种js和自定义写法的一种混合模式" class="headerlink" title="jsx =&gt; javascript + xml 一种js和自定义写法的一种混合模式"></a>jsx =&gt; javascript + xml 一种js和自定义写法的一种混合模式</h3><p>jsx语法主要是为了更好的读写模板或者组件,jsx语法浏览器是不是别的,通过babel的方式把jsx转成浏览器能够识别的结构</p>
+<p>在react中，写<code>&lt;div&gt;&lt;/div&gt;</code>,其实就等同于写了<code>React.createElement(&#39;div&#39;,children,&#39;click&#39;,&#39;active&#39;)</code></p>
+<p><strong>jsx规则</strong></p>
+<pre><code>1. 遇到样式中的`class`,直接变成`className`
+2. 标签必须闭合,特别需要注意单标签
+3. `react` 中只需要一个{ },vue需要两个{ }
+4. { }中能够放任何得js代码
+5. 默认展开数组
+6. 注释
+7. 可以申明函数,但是不能直接调用
+8. `value={a}`赋值某个元素的属性
+9. 设置`style={{width:'200px',height:'200px'}}`
+10. 表单元素设置默认值的时候,就会报错,因为他会认为input为一个动态组件,是动态就会操作数据(value就一定会变化),一定会变化,就一定要有事件(onChange),所以才会报错,有两种解决办法:
+   1. 就给表单元素加上事件（onChange）  (受控组件)官方更加推荐使用
+    &lt;input value=&quot;1&quot; onChange={ } /&gt;
+    2. 定义默认值的时候就使用defaultValue（非受控组件）
+    &lt;input defaultValue=&quot;1&quot; /&gt;
+</code></pre><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>==在index.js中==<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import React from &apos;react&apos;;//引入主要库</span><br><span class="line">import ReactDOM from &apos;react-dom&apos;//引入把jsx转成能够让浏览器识别的工具</span><br><span class="line">import &apos;./index.css&apos;//引入样式还有其他的文件</span><br><span class="line"></span><br><span class="line">//热更新</span><br><span class="line">if(module.hot)&#123;</span><br><span class="line">    module.hot.accept();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//定义组件</span><br><span class="line">//一定要注意类名大写,小写会出问题</span><br><span class="line">//定义组件的一种方式</span><br><span class="line">/*</span><br><span class="line">	其中引入的一种方式</span><br><span class="line">		import &#123;Component&#125; from &apos;react&apos;</span><br><span class="line">		class App extends Componengt&#123;&#125;</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">class App extends React.Component&#123;</span><br><span class="line">    //组件在挂载的时候,先回执行constructor,只会执行一次,然后经过几个钩子函数之后,走到render</span><br><span class="line">    //只要数据发生变化,就会再次执行render,而constructor是不会改变了</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        let &#123;aaa,bbb&#125; = this.props;</span><br><span class="line">        return(</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">            	&lt;h1&gt;组件&lt;/h1&gt;</span><br><span class="line">            	&lt;div&gt;&#123;aaa&#125;&lt;/div&gt;</span><br><span class="line">            	&lt;div&gt;&#123;bbb&#125;&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//定义组件的另一种方式</span><br><span class="line">function Ppa(props)&#123;</span><br><span class="line">    return (</span><br><span class="line">    	&lt;h1&gt;111&lt;/h1&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line">//挂载组件(根节点的挂载)</span><br><span class="line">/*</span><br><span class="line">	ReactDOM.render()是个方法,其中有三个参数:</span><br><span class="line">		第一个参数:</span><br><span class="line">			模板/组件(注意:所有的模板顶层只能有一个标签)</span><br><span class="line">        第二个参数:</span><br><span class="line">        	挂载的根节点</span><br><span class="line">        第三个参数:</span><br><span class="line">        	挂在完成之后触发的回调函数</span><br><span class="line">*/</span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;div&gt;HELLO WORLD</span><br><span class="line">        &lt;App aaa=&quot;你好&quot; &#123;...&#123;</span><br><span class="line">            bbb:&apos;世界&apos;</span><br><span class="line">        &#125;&#125;&gt;</span><br><span class="line">    &lt;/div&gt;,</span><br><span class="line">	document.getElementById(&apos;root&apos;),</span><br><span class="line">    ()=&gt;&#123;</span><br><span class="line">        console.log(&apos;挂载成功&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<h2 id="数据之间的通信-单向数据流"><a href="#数据之间的通信-单向数据流" class="headerlink" title="数据之间的通信(单向数据流)"></a>数据之间的通信(单向数据流)</h2><p>传递数据在组件身上使用属性绑定的方式<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;App aaa=&quot;你好&quot; bbb=&quot;世界&quot;&gt;</span><br><span class="line">//或者(推荐)</span><br><span class="line">&lt;App &#123;...&#123;</span><br><span class="line">	aaa:&apos;你好&apos;,</span><br><span class="line">    bbb:&apos;世界&apos;</span><br><span class="line">&#125;&#125;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>子组件接收用<code>this.props</code></p>
+<h2 id="类的声明方式-有状态-this-生命周期"><a href="#类的声明方式-有状态-this-生命周期" class="headerlink" title="类的声明方式,有状态,this,生命周期"></a>类的声明方式,有状态,this,生命周期</h2><p>写方法的时候,如果不对函数做处理,事件函数的this默认指向undefined</p>
+<p>解决方案:</p>
+<ol>
+<li>使用create-app <code>click=()=&gt;{ }</code></li>
+<li>绑定bind.this <code>constrctor(){this.click=this.click.bind(this)}</code></li>
+<li><code>click(){ } &lt;button onclick = {(e)=&gt;{this.click.bind(this)}}&gt;</code></li>
+<li><code>click(){ } &lt;button onClick={(e)=&gt;this.click(e)&gt;</code><h2 id="state状态"><a href="#state状态" class="headerlink" title="state状态"></a>state状态</h2>操作状态中的数据,就能操作视图<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">constructor()&#123;</span><br><span class="line">    this.state = &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>操作数据不能直接使用<code>this.state.xx = ooo</code><br><strong>只能通过this.setState()去修改你的状态</strong><br>this.setState(对象(就是state的数据),()=&gt;{当操作完数据之后的回调回调函数})</p>
+<p>this.setState(函数(prev)=&gt;{return prev+1},()=&gt;{当操作完数据之后的回调函数})</p>
+<p><code>this.state = {}</code> 状态初始化 初始化必须放在constructor下</p>
+<p>只要更新state就会更新视图</p>
+<p>从父级传进来的为props<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="comment">//&lt;input num="n"&gt;   props:['num']</span></span><br><span class="line"><span class="comment">//&lt;input num="aaa" /&gt;  this.props.num</span></span><br></pre></td></tr></table></figure></p>
+<p>父级传子级，把数据挂在子组件的属性上子组件接收父组件的数据通过this.props</p>
+<p>表单如果要设置默认值</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">defaultValue/onChange</span><br><span class="line">checkbox  defaultChecked/onChange</span><br><span class="line"><span class="comment">//就相当于vue的</span></span><br><span class="line">@nn=<span class="string">"cc"</span></span><br><span class="line"><span class="keyword">this</span>.$emit(<span class="string">'nn'</span>)</span><br></pre></td></tr></table></figure>
+<p>子传父</p>
+<ol>
+<li>父级需要定义一个修改数据的方法</li>
+<li>把修改数据的方法传给子组件</li>
+<li>当子组件需要修改父级数据的时候，调用父级传过来的修改方法</li>
+</ol>
+<ul>
+<li>方法:(把父级的数据变成子级，子级的数据不跟父级的数据有瓜葛了)<ol>
+<li>把父级的数据变成子级的</li>
+<li>子级修改</li>
+</ol>
+</li>
+</ul>
+<h3 id="受控组件"><a href="#受控组件" class="headerlink" title="受控组件"></a>受控组件</h3><p>表单元素如果设置一个默认值（基于state中的状态），此时表单元素就是一个受控组件。</p>
+<p>value、checked</p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期:"></a>生命周期:</h2><p><code>mounting</code>:</p>
+<p> <strong>只会执行一次</strong></p>
+<p> constructor -&gt; 数据的初始化 (1)</p>
+<p> ComponentWillmount 组件挂载之前(2)</p>
+<p> render 解析jsx (3)</p>
+<p> ComponentDidMount 挂载成功(4) 一般这个时候开始数据请求</p>
+<p><code>updating</code>:</p>
+<p> 当数据改变的时候触发</p>
+<p> componentWillReceiveProps 当父级的数据变化(只有父级数据发生变化会触发,没有就直接进行下面的)</p>
+<p> shouldComponentUpdate(nextProps,nextState) 优化性能，接下来的组件要不要更新 (如果写了<code>shouldComponentUpdate</code>就一定要写返回值,默认返回一个<code>true</code>,只有输出<code>true</code>的情况下,下面那三个才会执行)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//nextProps:下一次父级的数据</span><br><span class="line">//nextState:下一次自己的状态</span><br><span class="line"></span><br><span class="line">//这一次自己的状态:this,state.num = 0</span><br><span class="line">//下一次自己的状态:this.state.num = 1</span><br><span class="line"></span><br><span class="line">//他在里面会进行对比 nextState.data !== this.state.data 如果是true就进render更新,如果是false就不进render,不更新</span><br></pre></td></tr></table></figure>
+<p> componentWillUpdate</p>
+<p> render</p>
+<p> componentDidUpdate (可以当作watch来使用)</p>
+<p><code>unmounting</code>:</p>
+<p> 组件卸载的时候</p>
+<p> componentWillUnmount 关闭定时器，清除格式事件…</p>
+<p><strong>验证的结果</strong></p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2019/01/23/Trivia-01/" data-toggle="tooltip" data-placement="top" title="Trivia-01">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2019/01/21/把猫放进盒子里/" data-toggle="tooltip" data-placement="top" title="把猫放进盒子里">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80MjM2Ni8xODkxMw==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#React"><span class="toc-text">React</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jsx"><span class="toc-text">jsx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jsx-gt-javascript-xml-一种js和自定义写法的一种混合模式"><span class="toc-text">jsx =&gt; javascript + xml 一种js和自定义写法的一种混合模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-text">流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据之间的通信-单向数据流"><span class="toc-text">数据之间的通信(单向数据流)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类的声明方式-有状态-this-生命周期"><span class="toc-text">类的声明方式,有状态,this,生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#state状态"><span class="toc-text">state状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#受控组件"><span class="toc-text">受控组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生命周期"><span class="toc-text">生命周期:</span></a></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#-React -框架" title="-React -框架">-React -框架</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/yan764238964">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/mo-ran-hen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/5194224563">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/sorryblue">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 薛定谔的雪碧 2019
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://sorryblue.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = '3a43a1f4d7fac17fde189c0f259ff121';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjwhe1uh2g3050050wgo.gif">
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+
+</html>

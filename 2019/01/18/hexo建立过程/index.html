@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="薛定谔的雪碧在 Github 上的个人博客">
+    <meta name="keyword" content>
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxxtqngmj3029029jrd.jpg">
+    <link rel="alternate" type="application/atom+xml" title="薛定谔的雪碧" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        hexo建立过程｜Sorryblue&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://sorryblue.github.io/2019/01/18/hexo建立过程/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxyqptqkj31z4140gpv.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
+" data-ishome="false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    薛定谔的雪碧
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="nullhttp://ww1.sinaimg.cn/large/005Fwr5xly1g12ez9q3f6j31hc0u0gpw.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1g12ez9q3f6j31hc0u0gpw.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>hexo建立过程</h1>
+                    
+                    <h2 class="subheading">基于HEXO的博客建立</h2>
+                    
+                    <span class="meta">
+                         作者 Sorryblue
+                        <span>
+                          日期 2019-01-18
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#-blog" title="-blog">-blog</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            hexo建立过程
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><ol>
+<li><p>Node.js 下载,并安装</p>
+</li>
+<li><p>Git下载,并安装</p>
+</li>
+<li><p>安装<code>Hexo</code>,在命令行运行一下命令:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化Hexo,在命令行一次运行一下命令:</p>
+</li>
+</ol>
+<p>存放Hexo初始化文件的路径,就是站点目录,我的是folder</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init folder</span><br><span class="line">cd folder</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后,在路径上,可以用<code>ls</code>查看产生的文件和文件夹:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>注:</p>
+<ul>
+<li><p>hexo相关的命令均在站点目录,用Git Bash运行</p>
+</li>
+<li><p>站点配置文件: 站点目录下的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br></pre></td></tr></table></figure>
+<ul>
+<li>路径为<code>folder\_config.yml</code></li>
+</ul>
+</li>
+<li><p>主题配置文件: 站点目录下的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme</span><br></pre></td></tr></table></figure>
+<p>文件夹下的,主题文件夹下的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br></pre></td></tr></table></figure>
+<ul>
+<li>路径为<code>folder\theme\选择的主题的名字\_config.yml</code></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>启动服务器,在<code>folder</code>路径下,输入以下命令,运行:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p><strong>注:</strong></p>
+<ul>
+<li><code>hexo server</code>可以简写为<code>hexo s</code></li>
+</ul>
+<ol>
+<li>浏览器访问地址: <code>https://localhost:4000</code></li>
+</ol>
+<p>现在,Hexo已经在本地搭建好了</p>
+<h2 id="实施方案"><a href="#实施方案" class="headerlink" title="实施方案"></a>实施方案</h2><h3 id="用GithubPages"><a href="#用GithubPages" class="headerlink" title="用GithubPages"></a>用GithubPages</h3><h4 id="1-创建Github帐号"><a href="#1-创建Github帐号" class="headerlink" title="1. 创建Github帐号"></a>1. 创建Github帐号</h4><h4 id="2-创建仓库-仓库名为Github用户名-github-io"><a href="#2-创建仓库-仓库名为Github用户名-github-io" class="headerlink" title="2. 创建仓库,仓库名为Github用户名.github.io"></a>2. 创建仓库,仓库名为<code>Github用户名.github.io</code></h4><p>2.1. 点击<code>+</code>号选择New<br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fyzntl4bvqj307n05ydfw.jpg" alt="new">)<br>2.2. 地址名字一定要写用户名<code>+github.io</code>以后方便,下面勾选上,然后点击<code>create repositories</code><br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fyznuy6wrbj30ny0gw402.jpg" alt="hubyu"><br>2.3. 然后会跳到哭得界面,选择<code>setting</code><br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fyznveznd7j30vr0fgtb0.jpg" alt="setting"><br>2.4. 进入<code>setting</code>之后往下拉找到<code>GitHub pages</code>也可以通过<code>ctrl + f</code>直接搜索<code>GitHub pages</code>找到位置,选择<code>theme</code>主题<br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fyznvm0bzlj30nb0hcmyx.jpg" alt="theme"><br>2.5. 选择合适的主题,然后确认,其实我们选什么都无所谓,一会还要把主题给换掉:joy::joy:<br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fyznwv4td7j30uf0f775q.jpg" alt="select"><br>2.6. 现在就可以通过<code>用户名.github.io</code>访问你的blog,但是现在为止,还没做完,我们好像忘了hexo,我们<code>npm install</code>了,不用就浪费了</p>
+<h4 id="3-将本地Hexo博客推送到githubPages"><a href="#3-将本地Hexo博客推送到githubPages" class="headerlink" title="3. 将本地Hexo博客推送到githubPages"></a>3. 将本地Hexo博客推送到githubPages</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3.1 安装`hexo-deployer-git`插件,在命令行运行以下命令:</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>3.2 添加SSH key</p>
+<ul>
+<li><p>这个以前都做过,还记得我们一起创建<code>github</code>(全球最大基佬交友网站)帐号的时候,一搞就是一天,那是我逝去的青春</p>
+<ul>
+<li>有一个指令可以验证是否添加成功,如果返回<code>You’ve successfully authenticated</code>就是成功的</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>3.3 修改站点目录下的(folder)<code>_config.yml</code>文件末尾修改为:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https://github.com/用户名/用户名.github.io</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+<p>3.4 进行我第一喜欢的推送环节,如果返回<code>INFO Deploy done: git</code>,就说明成功了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s //这里需要说一下,这一步是让你在本地浏览器预览用的,改了一些内容,样式都可以通过强力的`localhost`查看变化,在运行指令后会给你访问路径,值得一提的是,这个预览不是百分百成功的,有时候本地查看没问题,推送上去之后,在网站上看,整个垮掉了,我也不太清楚为什么</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="主题应用"><a href="#主题应用" class="headerlink" title="主题应用"></a>主题应用</h2><p><strong>人生而为了折腾</strong></p>
+<h4 id="1-下载主题"><a href="#1-下载主题" class="headerlink" title="1. 下载主题:"></a>1. 下载主题:</h4><ul>
+<li>通过<code>git clone https://github.com/theme-next/hexo-theme-next</code>的方式下载这个主题,我用的是next主题,也可以找一下其他的主题,符合自己灵魂的主题,也可以自己去写心中的主题:smile:</li>
+</ul>
+<h4 id="2-最好在主题文件夹-也就是theme中克隆-以后有更新还可以直接pull"><a href="#2-最好在主题文件夹-也就是theme中克隆-以后有更新还可以直接pull" class="headerlink" title="2. 最好在主题文件夹,也就是theme中克隆,以后有更新还可以直接pull"></a>2. 最好在主题文件夹,也就是<code>theme</code>中克隆,以后有更新还可以直接<code>pull</code></h4><h4 id="3-更改站点配置文件-config-yml的theme字段-为主题文件夹的名字"><a href="#3-更改站点配置文件-config-yml的theme字段-为主题文件夹的名字" class="headerlink" title="3. 更改站点配置文件_config.yml的theme字段,为主题文件夹的名字"></a>3. 更改站点配置文件<code>_config.yml</code>的<code>theme</code>字段,为主题文件夹的名字</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: 主题文件夹的名称</span><br></pre></td></tr></table></figure>
+<h4 id="4-更改样式"><a href="#4-更改样式" class="headerlink" title="4. 更改样式:"></a>4. 更改样式:</h4><ul>
+<li><p>一般的页面样式都是通过<code>themes/你的主题文件夹/source/css/_custom/custom.styl</code>来进行</p>
+</li>
+<li><p>比如加个背景图:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">    background:url(/images/background.jpg);//路径是和css同级下有一个images文件夹,图片都在里面</span><br><span class="line">    background-size:cover;</span><br><span class="line">    background-repeat:no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="5-加个live2D-为什么没有香蕉君差评"><a href="#5-加个live2D-为什么没有香蕉君差评" class="headerlink" title="5. 加个live2D,为什么没有香蕉君差评"></a>5. 加个live2D,为什么没有香蕉君差评</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5.1 首先进行我第二喜欢的`npm install`环节:</span><br><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+<p>5.2 选一个吧 <del>甭管蓝铝:污</del><br><strong>Epsilon2.1</strong><br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzmgjqsm21j305b07b744.jpg" alt="Epsilon2.1"><br><strong>miku</strong><br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzmgioies1j305b07cdfq.jpg" alt="miku"><br><strong>shizuku</strong><br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzmgh7a9d7j306506ct8l.jpg" alt="shizuku"><br><strong>tororo</strong><br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzmggo9c4zj305g075jr6.jpg" alt="tororo"><br><strong>tororo</strong><br><img src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzmglb30b8j305g075jr6.jpg" alt="hijiki"><br>5.3 将以下代码添加到<strong>站点</strong>配置文件<code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">   enable: true</span><br><span class="line">   scriptFrom: local</span><br><span class="line">   pluginRootPath: live2dw/</span><br><span class="line">   pluginJsPath: lib/</span><br><span class="line">   pluginModelPath: assets/</span><br><span class="line">   tagMode: false</span><br><span class="line">   log: false</span><br><span class="line">   model:</span><br><span class="line">     use: live2d-widget-model-你喜欢的模型名字</span><br><span class="line">   display:</span><br><span class="line">     position: right</span><br><span class="line">     width: 150</span><br><span class="line">     height: 300</span><br><span class="line">   mobile:</span><br><span class="line">     show: true</span><br></pre></td></tr></table></figure>
+<p>5.4 安装模型 执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-模型名字</span><br></pre></td></tr></table></figure>
+<p>5.5 建配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 在**站点**目录下建文件夹`live2d_models`,</span><br><span class="line">- 在`node_modules`中找到刚才下载的模型的文件夹,复制到`live2d_models`中</span><br></pre></td></tr></table></figure>
+<p>5.6 运行查看结果</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">//没问题就可以传上去了</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录:"></a>附录:</h2><h4 id="参考-其实就是一样的"><a href="#参考-其实就是一样的" class="headerlink" title="参考(其实就是一样的):"></a>参考(<del>其实就是一样的</del>):</h4><ul>
+<li><p><a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">遇见西门</a></p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">知乎吴润</a></p>
+</li>
+<li><p>命令:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo -g #安装Hexo</span><br><span class="line">npm update hexo -g #升级 </span><br><span class="line">hexo init #初始化博客</span><br><span class="line">命令简写</span><br><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>补充:<br>一般的博客都是有个简单介绍,然后点击查看全文,在配置中可以通过设置字数来进行折叠,但是一般推荐(主要是感觉不太自由,(<del>我喜欢自由的感觉</del>)),在你觉得可以折叠的某一行下添加<code>&lt;!--more--&gt;</code>来进行</p>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首先:</span><br><span class="line">	`npm insatll`//安装hexo</span><br><span class="line">`then`:</span><br><span class="line">	创建GithubPages</span><br><span class="line">`then`:</span><br><span class="line">	`npm insatll`//安装推送插件</span><br><span class="line">`then`:</span><br><span class="line">	`git clone`//安装主题</span><br><span class="line">`then`:</span><br><span class="line">	`npm install`//安装live2d</span><br><span class="line">`then`:</span><br><span class="line">	`hexo g hexo s hexo d`</span><br></pre></td></tr></table></figure>
+<p>其实还有很多内容没有讲,有兴趣的可以去再深入研究一下,什么搜索,评论</p>
+<h1 id="npm-install天下第一-破音"><a href="#npm-install天下第一-破音" class="headerlink" title="npm install天下第一!!!!(破音)"></a><code>npm install</code>天下第一!!!!(破音)</h1>
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2019/01/19/Vue路由/" data-toggle="tooltip" data-placement="top" title="Vue路由">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2019/01/17/VueApi/" data-toggle="tooltip" data-placement="top" title="VueApi">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80MjM2Ni8xODkxMw==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备环境"><span class="toc-text">准备环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实施方案"><span class="toc-text">实施方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用GithubPages"><span class="toc-text">用GithubPages</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建Github帐号"><span class="toc-text">1. 创建Github帐号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-创建仓库-仓库名为Github用户名-github-io"><span class="toc-text">2. 创建仓库,仓库名为Github用户名.github.io</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-将本地Hexo博客推送到githubPages"><span class="toc-text">3. 将本地Hexo博客推送到githubPages</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题应用"><span class="toc-text">主题应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-下载主题"><span class="toc-text">1. 下载主题:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-最好在主题文件夹-也就是theme中克隆-以后有更新还可以直接pull"><span class="toc-text">2. 最好在主题文件夹,也就是theme中克隆,以后有更新还可以直接pull</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-更改站点配置文件-config-yml的theme字段-为主题文件夹的名字"><span class="toc-text">3. 更改站点配置文件_config.yml的theme字段,为主题文件夹的名字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-更改样式"><span class="toc-text">4. 更改样式:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-加个live2D-为什么没有香蕉君差评"><span class="toc-text">5. 加个live2D,为什么没有香蕉君差评</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#附录"><span class="toc-text">附录:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#参考-其实就是一样的"><span class="toc-text">参考(其实就是一样的):</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm-install天下第一-破音"><span class="toc-text">npm install天下第一!!!!(破音)</span></a>
+                </li></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#-blog" title="-blog">-blog</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/yan764238964">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/mo-ran-hen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/5194224563">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/sorryblue">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 薛定谔的雪碧 2019
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://sorryblue.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = '3a43a1f4d7fac17fde189c0f259ff121';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjwhe1uh2g3050050wgo.gif">
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+
+</html>
