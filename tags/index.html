@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="薛定谔的雪碧在 Github 上的个人博客">
+    <meta name="keyword" content>
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxxtqngmj3029029jrd.jpg">
+    <link rel="alternate" type="application/atom+xml" title="薛定谔的雪碧" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Tags｜Sorryblue&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://sorryblue.github.io/Tags/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1fzjxyqptqkj31z4140gpv.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
+" data-ishome="false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    薛定谔的雪碧
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+<style>
+    .intro-header .site-heading {
+        margin: 50px;
+    }
+    
+    header.intro-header {
+        background-image: url('http://ww1.sinaimg.cn/large/005Fwr5xly1fzjw6yekt6j32nt1rv4iz.jpg')
+    }
+    
+</style>
+
+<!-- Page Header -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading text-center">
+                    <h1>Tags</h1>
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- 标签云 -->
+            <div id="tag_cloud" class="tags">
+                
+                <a href="#-React -框架" title="-React -框架" rel="1">-React -框架</a>
+                
+                <a href="#-冷知识" title="-冷知识" rel="51">-冷知识</a>
+                
+                <a href="#-Vue -API -指令" title="-Vue -API -指令" rel="1">-Vue -API -指令</a>
+                
+                <a href="#-Vuex" title="-Vuex" rel="1">-Vuex</a>
+                
+                <a href="#-Vue-router -Vue路由" title="-Vue-router -Vue路由" rel="1">-Vue-router -Vue路由</a>
+                
+                <a href="#-blog" title="-blog" rel="1">-blog</a>
+                
+                <a href="#-猫" title="-猫" rel="1">-猫</a>
+                
+                <a href="#-猫 -cat -box" title="-猫 -cat -box" rel="1">-猫 -cat -box</a>
+                
+            </div>
+
+            <!-- 标签列表 -->
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-React -框架">
+                    <span class="tag-text">-React -框架</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/22/React/">
+                        <h2 class="post-title">
+                            React
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            React基础了解
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-冷知识">
+                    <span class="tag-text">-冷知识</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/23/Trivia-01/">
+                        <h2 class="post-title">
+                            Trivia-01
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐01
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/24/Trivia-02/">
+                        <h2 class="post-title">
+                            Trivia-02
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐02
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/25/Trivia-03/">
+                        <h2 class="post-title">
+                            Trivia-03
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐03
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/26/Trivia-04/">
+                        <h2 class="post-title">
+                            Trivia-04
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐04
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/27/Trivia-05/">
+                        <h2 class="post-title">
+                            Trivia-05
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐05
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/28/Trivia-06/">
+                        <h2 class="post-title">
+                            Trivia-06
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐06
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/29/Trivia-07/">
+                        <h2 class="post-title">
+                            Trivia-07
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐07
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/30/Trivia-08/">
+                        <h2 class="post-title">
+                            Trivia-08
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐08
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/31/Trivia-09/">
+                        <h2 class="post-title">
+                            Trivia-09
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐09
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/01/Trivia-10/">
+                        <h2 class="post-title">
+                            Trivia-10
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐10
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/02/Trivia-11/">
+                        <h2 class="post-title">
+                            Trivia-11
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐11
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/03/Trivia-12/">
+                        <h2 class="post-title">
+                            Trivia-12
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐12
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/04/Trivia-13/">
+                        <h2 class="post-title">
+                            Trivia-13
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐13
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/05/Trivia-14/">
+                        <h2 class="post-title">
+                            Trivia-14
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐14
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/06/Trivia-15/">
+                        <h2 class="post-title">
+                            Trivia-15
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐15
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/07/Trivia-16/">
+                        <h2 class="post-title">
+                            Trivia-16
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐16
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/08/Trivia-17/">
+                        <h2 class="post-title">
+                            Trivia-17
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐17
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/09/Trivia-18/">
+                        <h2 class="post-title">
+                            Trivia-18
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐18
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/11/Trivia-20/">
+                        <h2 class="post-title">
+                            Trivia-20
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐20
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/10/Trivia-19/">
+                        <h2 class="post-title">
+                            Trivia-19
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐19
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/12/Trivia-21/">
+                        <h2 class="post-title">
+                            Trivia-21
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐21
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/13/Trivia-22/">
+                        <h2 class="post-title">
+                            Trivia-22
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐22
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/14/Trivia-23/">
+                        <h2 class="post-title">
+                            Trivia-23
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐23
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/15/Trivia-24/">
+                        <h2 class="post-title">
+                            Trivia-24
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐24
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/16/Trivia-25/">
+                        <h2 class="post-title">
+                            Trivia-25
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐25
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/17/Trivia-26/">
+                        <h2 class="post-title">
+                            Trivia-26
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐26
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/18/Trivia-27/">
+                        <h2 class="post-title">
+                            Trivia-27
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐27
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/19/Trivia-28/">
+                        <h2 class="post-title">
+                            Trivia-28
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐28
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/20/Trivia-29/">
+                        <h2 class="post-title">
+                            Trivia-29
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐29
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/21/Trivia-30/">
+                        <h2 class="post-title">
+                            Trivia-30
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐30
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/22/Trivia-31/">
+                        <h2 class="post-title">
+                            Trivia-31
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐31
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/23/Trivia-32/">
+                        <h2 class="post-title">
+                            Trivia-32
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐32
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/24/Trivia-33/">
+                        <h2 class="post-title">
+                            Trivia-33
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐33
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/25/Trivia-34/">
+                        <h2 class="post-title">
+                            Trivia-34
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐34
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/26/Trivia-35/">
+                        <h2 class="post-title">
+                            Trivia-35
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐35
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/27/Trivia-36/">
+                        <h2 class="post-title">
+                            Trivia-36
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐36
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/02/28/Trivia-37/">
+                        <h2 class="post-title">
+                            Trivia-37
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐37
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/01/Trivia-38/">
+                        <h2 class="post-title">
+                            Trivia-38
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐38
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/02/Trivia-39/">
+                        <h2 class="post-title">
+                            Trivia-39
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐39
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/03/Trivia-40/">
+                        <h2 class="post-title">
+                            Trivia-40
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐40
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/04/Trivia-41/">
+                        <h2 class="post-title">
+                            Trivia-41
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐41
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/05/Trivia-42/">
+                        <h2 class="post-title">
+                            Trivia-42
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐42
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/06/Trivia-43/">
+                        <h2 class="post-title">
+                            Trivia-43
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐43
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/07/Trivia-44/">
+                        <h2 class="post-title">
+                            Trivia-44
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐44
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/08/Trivia-45/">
+                        <h2 class="post-title">
+                            Trivia-45
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐45
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/09/Trivia-46/">
+                        <h2 class="post-title">
+                            Trivia-46
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐46
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/10/Trivia-47/">
+                        <h2 class="post-title">
+                            Trivia-47
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐47
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/11/Trivia-48/">
+                        <h2 class="post-title">
+                            Trivia-48
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐48
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/12/Trivia-49/">
+                        <h2 class="post-title">
+                            Trivia-49
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐49
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/13/Trivia-50/">
+                        <h2 class="post-title">
+                            Trivia-50
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐50
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+                <div class="post-preview">
+                    <a href="/2019/03/14/Trivia-51/">
+                        <h2 class="post-title">
+                            Trivia-51
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            冷知识套餐51
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-Vue -API -指令">
+                    <span class="tag-text">-Vue -API -指令</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/17/VueApi/">
+                        <h2 class="post-title">
+                            VueApi
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            Vue的API
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-Vuex">
+                    <span class="tag-text">-Vuex</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/20/Vuex/">
+                        <h2 class="post-title">
+                            Vuex
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            了解Vuex
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-Vue-router -Vue路由">
+                    <span class="tag-text">-Vue-router -Vue路由</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/19/Vue路由/">
+                        <h2 class="post-title">
+                            Vue路由
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            Vue路由基础
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-blog">
+                    <span class="tag-text">-blog</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/18/hexo建立过程/">
+                        <h2 class="post-title">
+                            hexo建立过程
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            基于HEXO的博客建立
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-猫">
+                    <span class="tag-text">-猫</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/16/为什么猫主子有时会在你爱抚它时反咬一口/">
+                        <h2 class="post-title">
+                            为什么猫主子有时会在你爱抚它时反咬一口
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            为什么猫主子有时会在你爱抚它时反咬一口
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="-猫 -cat -box">
+                    <span class="tag-text">-猫 -cat -box</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2019/01/21/把猫放进盒子里/">
+                        <h2 class="post-title">
+                            把猫放进盒子里
+                        </h2>
+                        
+                        <h3 class="post-subtitle">
+                            猫入盒
+                        </h3>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/yan764238964">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/mo-ran-hen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/5194224563">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/sorryblue">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 薛定谔的雪碧 2019
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+                <span class="post-count">博客全站共 45.3k 字</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://sorryblue.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = '3a43a1f4d7fac17fde189c0f259ff121';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://ww1.sinaimg.cn/large/005Fwr5xly1fzjwhe1uh2g3050050wgo.gif">
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+
+</html>
