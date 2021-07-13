@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      32 字
+      156 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -248,6 +248,22 @@
 <li>esModule规范 -&gt; ES6(import export)</li>
 <li>commonjs规范 -&gt; nodejs(require exports)</li>
 </ul>
+<h2 id="导入导出"><a href="#导入导出" class="headerlink" title="导入导出"></a>导入导出</h2><ul>
+<li><code>import xxx from &#39;./aaa</code>这种导入对应的 都是该文件的默认导出 <code>export default</code></li>
+<li><code>import &#123;&#125; from &#39;./aaa</code>这种导入对应的是该文件 有名字的导出<code>export 声明关键字(let v = )</code></li>
+</ul>
+<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><ul>
+<li><code>npm i -S xxx</code> 与 <code>npm i --save</code>装的包都属于生产依赖</li>
+<li><code>npm i --save-dev xxx</code>与<code>npm i -D xxx</code> 装的包属于开发依赖</li>
+</ul>
+<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><ul>
+<li>包大概分为三类<ul>
+<li>内置包(fs path url http…)</li>
+<li>三方包</li>
+<li>自己写的文件(import x form ‘./a’)</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr>
@@ -283,6 +299,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/07/13/react%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%951/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">react基本语法1</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
