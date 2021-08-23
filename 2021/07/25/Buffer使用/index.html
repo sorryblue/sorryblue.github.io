@@ -18,7 +18,7 @@
   <meta name="author" content="Sorryblue">
   <meta name="keywords" content="">
   
-  <title>包的管理 - Sorryblue&#39;s Blog</title>
+  <title>Buffer使用 - Sorryblue&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -158,12 +158,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://z3.ax1x.com/2021/07/22/W0SM9S.jpg') no-repeat center center;
+         style="background: url('https://z3.ax1x.com/2021/07/09/Rj9VOS.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="包的管理">
+            <span class="h2" id="subtitle" title="Buffer使用">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-22 10:26" pubdate>
-        2021年7月22日 上午
+      <time datetime="2021-07-25 14:45" pubdate>
+        2021年7月25日 下午
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      479 字
+      427 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      6
        分钟
     </span>
   
@@ -238,43 +238,13 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">包的管理</h1>
+            <h1 style="display: none">Buffer使用</h1>
             
             <div class="markdown-body">
-              <h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><ul>
-<li><code>npm i -S xxx</code> 与 <code>npm i --save</code>装的包都属于生产依赖</li>
-<li><code>npm i --save-dev xxx</code>与<code>npm i -D xxx</code> 装的包属于开发依赖</li>
+              <h1 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>缓冲区 暂时存放输入输出数据的一段内存</li>
 </ul>
-<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><ul>
-<li><p>包大概分为三类</p>
-<ul>
-<li><p>内置包(fs path url http…)</p>
-<ul>
-<li><p>path Node专门用来处理路径的内置包</p>
-  <figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-built_in">console</span>.log(path.resolve(__dirname,<span class="hljs-string">&#x27;./package.json&#x27;</span>));<br><span class="hljs-comment">//拿到某个文件的绝对路径</span><br><span class="hljs-comment">//path.resolve 与 path.join 的区别</span><br><span class="hljs-comment">//path.resolve能识别出参数里面是绝对路径还是相对路径，相对路径时与</span><br><span class="hljs-comment">//前面的__dirname进行拼接，绝对路径的时候，直接输出参数的绝对路径</span><br><span class="hljs-comment">//path.join只是简单的将两个参数进行拼接，识别不出参数是绝对路径还是相对路径</span><br><span class="hljs-built_in">console</span>.log(path.resolve(__dirname,<span class="hljs-string">&#x27;./package.json&#x27;</span>));<span class="hljs-comment">//-&gt;&quot;/home/xxx/Documents/xxx/package.json&quot;</span><br><span class="hljs-built_in">console</span>.log(path.join(__dirname,<span class="hljs-string">&#x27;./package.json&#x27;</span>));<span class="hljs-comment">//-&gt;&quot;/home/xxx/Document/xxx/package.json&quot;</span><br><span class="hljs-built_in">console</span>.log(path.resolve(__dirname,<span class="hljs-string">&#x27;/package.json&#x27;</span>));<span class="hljs-comment">//-&gt;&quot;/package.json&quot;</span><br><span class="hljs-built_in">console</span>.log(path.join(__dirname,<span class="hljs-string">&#x27;/package.json&#x27;</span>));<span class="hljs-comment">//-&gt;&quot;/home/xxx/Document/xxx/package.json&quot;</span><br></code></pre></div></td></tr></table></figure></li>
-<li><p>url 用来解析query参数</p>
-  <figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> str = <span class="hljs-string">&#x27;http://baidu.com?q=123&amp;w=234&#x27;</span>;<br><span class="hljs-built_in">console</span>.log(url.parse(str,<span class="hljs-literal">true</span>));<span class="hljs-comment">//query属性变成对象 query: </span><br><span class="hljs-comment">//[Object: null prototype] &#123; q: &#x27;123&#x27;, w: &#x27;234&#x27; &#125;</span><br><span class="hljs-built_in">console</span>.log(url.parse(str));<span class="hljs-comment">//query: &#x27;q=123&amp;w=234&#x27;</span><br><span class="hljs-comment">//新版写法，上面的已废弃</span><br><span class="hljs-keyword">let</span> utr = <span class="hljs-keyword">new</span> URL(str);<br><span class="hljs-built_in">console</span>.log(utr);<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">    URL &#123;</span><br><span class="hljs-comment">        href: &#x27;http://baidu.com/?q=123&amp;w=234&#x27;,</span><br><span class="hljs-comment">        origin: &#x27;http://baidu.com&#x27;,</span><br><span class="hljs-comment">        protocol: &#x27;http:&#x27;,</span><br><span class="hljs-comment">        username: &#x27;&#x27;,</span><br><span class="hljs-comment">        password: &#x27;&#x27;,</span><br><span class="hljs-comment">        host: &#x27;baidu.com&#x27;,</span><br><span class="hljs-comment">        hostname: &#x27;baidu.com&#x27;,</span><br><span class="hljs-comment">        port: &#x27;&#x27;,</span><br><span class="hljs-comment">        pathname: &#x27;/&#x27;,</span><br><span class="hljs-comment">        search: &#x27;?q=123&amp;w=234&#x27;,</span><br><span class="hljs-comment">        searchParams: URLSearchParams &#123; &#x27;q&#x27; =&gt; &#x27;123&#x27;, &#x27;w&#x27; =&gt; &#x27;234&#x27; &#125;,</span><br><span class="hljs-comment">        hash: &#x27;&#x27;</span><br><span class="hljs-comment">    &#125;</span><br><span class="hljs-comment">*/</span><br></code></pre></div></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>三方包</p>
-</li>
-<li><p>自己写的文件(import x form ‘./a’)</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="node的全局变量"><a href="#node的全局变量" class="headerlink" title="node的全局变量"></a>node的全局变量</h2><ul>
-<li>global</li>
-<li>process<ul>
-<li>process.platform 当前执行文件所在的系统</li>
-<li>process.argv<ul>
-<li>获得一个数组，第一项是node的地址 第二项是执行文件的地址，后面的项是执行命令时设置的参数</li>
-</ul>
-</li>
-<li>process.env</li>
-</ul>
-</li>
-</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> b1 = <span class="hljs-keyword">new</span> Buffer(<span class="hljs-number">12</span>);<br><span class="hljs-comment">//new Buffer中的参数代表字节数，字节（byte），一个字节使用8位二进制表示</span><br><span class="hljs-built_in">console</span>.log(b1);<br>b1.write(<span class="hljs-string">&quot;hello&quot;</span>,<span class="hljs-number">0</span>,<span class="hljs-number">6</span>,<span class="hljs-string">&#x27;utf-8&#x27;</span>);<br><span class="hljs-comment">//一个汉字三个字节</span><br><span class="hljs-comment">//b1.write(string,编写的起始位置，写多少个字节，编码格式)</span><br><span class="hljs-built_in">console</span>.log(b1.toString());<br><span class="hljs-comment">//新版写法</span><br><span class="hljs-keyword">let</span> b2 = Buffer.alloc(<span class="hljs-number">12</span>);<span class="hljs-comment">//创造了一个12字节大小的buffer</span><br><span class="hljs-keyword">let</span> b2 = Buffer.alloc(<span class="hljs-number">12</span>,<span class="hljs-string">&#x27;hello&#x27;</span>);<span class="hljs-comment">//会使用默认内容hello重复填充，直到12字节为止</span><br><span class="hljs-built_in">console</span>.log(b2);<span class="hljs-comment">//&lt;Buffer 68 65 6c 6c 6f 68 65 6c 6c 6f 68 65&gt;</span><br><span class="hljs-built_in">console</span>.log(b2.toString());<span class="hljs-comment">//’hellohellohe‘</span><br><span class="hljs-comment">//当填充的内容为汉字的时候，假如12个字节可以盛放4个汉字，那么当只设置11个字节，来盛放</span><br><span class="hljs-comment">//4个汉字，最后一个汉字只能盛放三分之二的字节，可能导致最后一个字乱码</span><br><span class="hljs-keyword">let</span> b3 = Buffer.from(<span class="hljs-string">&quot;hello world&quot;</span>);<span class="hljs-comment">//将参数全部放入buffer中</span><br><span class="hljs-built_in">console</span>.log(b3);<span class="hljs-comment">//&lt;Buffer 68 65 6c 6c 6f 20 77 6f 72 6c 64&gt;</span><br><span class="hljs-built_in">console</span>.log(b3.toString());<span class="hljs-comment">//hello world</span><br><span class="hljs-comment">//合并多个buffer</span><br><span class="hljs-keyword">let</span> b31 = Buffer.from(<span class="hljs-string">&#x27;hello&#x27;</span>);<br><span class="hljs-keyword">let</span> b32 = Buffer.from(<span class="hljs-string">&#x27;world&#x27;</span>);<br><span class="hljs-keyword">let</span> concatB = Buffer.concat([b31,b32]);<br><span class="hljs-built_in">console</span>.log(concatB3.toString());<span class="hljs-comment">//helloworld</span><br><span class="hljs-built_in">console</span>.log(concatB3);<span class="hljs-comment">//&lt;Buffer 68 65 6c 6c 6f 77 6f 72 6c 64&gt;</span><br><span class="hljs-built_in">console</span>.log(concatB.slice(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>));<span class="hljs-comment">//&lt;Buffer 65 6c&gt;从索引为1的位置，截取到索引为3的位置</span><br><span class="hljs-built_in">console</span>.log(concatB.slice(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>).toString());<span class="hljs-comment">//el</span><br><span class="hljs-comment">//复制</span><br><span class="hljs-keyword">let</span> b4 = Buffer.alloc(<span class="hljs-number">12</span>);<br>b3.copy(b4,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">5</span>);<span class="hljs-comment">//参数：粘贴到b4，从b4的哪个位置开始贴，从b3哪里开始，到b3哪里结束</span><br><span class="hljs-comment">//b3.copy(b4,b4start,b3start,b3length)</span><br><span class="hljs-built_in">console</span>.log(b4);<span class="hljs-comment">//&lt;Buffer 68 65 6c 6c 6f 00 00 00 00 00 00 00&gt;</span><br><span class="hljs-built_in">console</span>.log(b4.toString());<span class="hljs-comment">//hello</span><br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
@@ -292,9 +262,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/npm/">npm</a>
+                      <a class="hover-with-bg" href="/tags/node/">node</a>
                     
-                      <a class="hover-with-bg" href="/tags/webpack/">webpack</a>
+                      <a class="hover-with-bg" href="/tags/Buffer/">Buffer</a>
                     
                   </div>
                 
@@ -311,9 +281,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/25/Buffer%E4%BD%BF%E7%94%A8/">
+                      <a href="/2021/07/26/fs%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Buffer使用</span>
+                        <span class="hidden-mobile">fs文件系统</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -321,8 +291,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/07/13/react%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%951/">
-                        <span class="hidden-mobile">react基本语法1</span>
+                      <a href="/2021/07/22/%E5%8C%85%E7%9A%84%E7%AE%A1%E7%90%86/">
+                        <span class="hidden-mobile">包的管理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
